@@ -5,8 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- All other tags below first two metas -->
         <title>The Annex BVI</title>
-        <link href="./styles/main.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/096c8121b3.js" crossorigin="anonymous" SameSite="none Secure"></script><!--FontAwesome CDN-->
+        <script
+            src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="./styles/main.css" rel="stylesheet">
     </head>
     <body>
         <main>
@@ -30,7 +36,7 @@
                     <span>BVI Weather</span>
                     <div id="weather-info">
                         <div id="weather-img">
-                            <img id="weather-icon" height="50" width="50">
+                            <img id="weather-icon" height="40" width="40">
                         </div>
                         <div id="weather-data">
                             <span id="temp"></span>
@@ -86,9 +92,65 @@
             </nav>
 
             <main id="forms-wrapper">
-                <h2>Welcome to the forms page</h2>
-                <h3>Click which type of form you're looking for below</h3>
-                <p id="breadcrumb"><a id="back-forms" onclick="back()">All Forms</a><span id="breadcrumb-page"></span></p>
+                <div class="forms-step" id="step-1">
+                        <h2>On this page, you can download the forms needed for your trip</h2>
+                        <h3>What surname did you provide when you booked your Annex vacation?</h3>
+                    <div class="input-group mb-3 forms-input" id="last-name">
+                        <input type="text" class="form-control" id="last-name-field" placeholder="Last Name" aria-label="Last Name" aria-describedby="button-addon2" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="button-addon2"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forms-step" id="step-2">
+                    <h2>Trip Dates</h2>
+                    <div class="coldiv">
+                        <label for="start-date-cont">Start date</label>
+                        <div class="input-group mb-3 forms-input" id="start-date-cont">
+                            <input type="text" placeholder="MM" id="start-date-m" class="form-control" aria-label="Month" maxlength="2">
+                            <input type="text" placeholder="DD" id="start-date-d" class="form-control" aria-label="Day" maxlength="2">
+                            <input type="text" placeholder="YYYY" id="start-date-y" class="form-control" aria-label="Year" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="coldiv">
+                        <label for="end-date-cont">End date</label>
+                        <div class="input-group mb-3 forms-input" id="end-date-cont">
+                            <input type="text" placeholder="MM" id="end-date-m" class="form-control" aria-label="Month" maxlength="2">
+                            <input type="text" placeholder="DD" id="end-date-d" class="form-control" aria-label="Day" maxlength="2">
+                            <input type="text" placeholder="YYYY" id="end-date-y" class="form-control" aria-label="Year" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="f-c-c">
+                        <button type="button" id="2-prev" class="btn btn-primary prev">Back</button>
+                        <button type="button" id="2-next" class="btn btn-primary next">Next</button>
+                    </div>
+                </div>
+
+
+
+                <div class="forms-step" id="completed">
+                    <h2>Thank you, your pdf containing necessary files is below.</h2>
+                    <div id="forms-completed-cont">
+                        <div id="forms-info">
+                            <span id="rf0"></span>
+                            <span id="rf1"></span>
+                            <span id="rf2"></span>
+                            <p><a id="download-pdf">Download PDF</a></p>
+                        </div>
+                        <div id="forms-preview">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                
+                <!-- <p id="breadcrumb"><a id="back-forms" onclick="back()">All Forms</a><span id="breadcrumb-page"></span></p>
                 <section class="form-type-cont">
                     <a class="form-type" id="fishing" name="Fishing" onclick="toFiles(this)"></a>
                     <div class="form-type" id="preference" name="Preference" onclick="toFiles(this)"></div>
@@ -107,7 +169,7 @@
                         </div>
                         
                     </div>
-                </section>
+                </section> -->
             </main>
 
 
