@@ -109,11 +109,15 @@ request.send()// Send request
 tab.onclick = function(e){
     e.preventDefault();
     const ele = document.getElementById("expanded-weather");
+    const o = document.getElementById("desktop-weather-tab")
     if(ele.style.display === "none"){
         ele.style.display = "flex";
+        o.style.borderBottomColor = "white"
+        
     }
     else{
         ele.style.display = "none"
+        o.style.borderBottomColor = "transparent"
     }
 }
 
