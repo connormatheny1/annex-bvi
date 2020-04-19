@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- All other tags below first two metas -->
+        <title>Rat Room Assignments</title>
+        <link href="./random.css" rel="stylesheet">
+</head>
+<body>
+    <div id="random">
+    <div class="random-rooms">
+        <a id="assign" onclick="assign()">Assign Rooms</a>
+        <a id="populate" onclick="populate()">Populate List</a>
+        <a id="reset-list" onclick="resetList()">Reset List</a>
+        <a onclick="rats()">Are you a rat?</a>
+    </div>
+    <p id="rats-yes"></p>
+
+    <table id="room-table">
+            <thead>
+                <tr>
+                    <th>Room</th>
+                    <th>Rat 1</th>
+                    <th>Rat 2</th>
+                    <th>Rats?</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="./random.js" type="text/javascript"></script>
+</body>
+</html>

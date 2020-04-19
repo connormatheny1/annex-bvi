@@ -1,0 +1,55 @@
+#random{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    height: 800px;
+}
+
+#room-table{
+    width: 400px;
+}
+
+th{
+    text-align: left;
+}
+
+.random-rooms{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+}
+
+.random-rooms a{
+    color: blue;
+    cursor: pointer;
+}
+
+.random-rooms a:hover{
+    color: darkblue;
+    text-decoration: underline;
+}
+
+#rat-yes{
+    position: absolute;
+    top: 10;
+    right: 10;
+
+}
+
+#assign{
+    display: block;
+}
+
+#populate{
+    display: none;
+}
+
+#reset-list{
+    display: none;
+}
