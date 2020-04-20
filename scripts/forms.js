@@ -27,6 +27,11 @@ $(document).ready(function(){
         if(!valid.status){
             return console.log(valid.error)
         }
+        if(valid.status && valid.admin){
+            config.start = 'admin'
+            config.end = 'admin'
+            return nextStep(currentStep)
+        }
         startString = parseDates(true, valid.start)
         endString = parseDates(false, valid.end)
         config.start = startString
@@ -64,27 +69,9 @@ $(document).ready(function(){
         if(!config.start || !config.end || !config.name){
             return console.log("config value(s) somehow null")
         }
-        $("#rf0").html(`Name: ${config.name}`)
-        $("#rf0").html(`Trip start: ${config.start}`)
-        $("#rf0").html(`Trip end: ${config.end}`)
-
-
-
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
-            .then(resp => resp.blob())
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const a = $("#download-pdf");
-                a.style.display = 'none';
-                a.href = url;
-                // the filename you want
-                a.download = 'testyy.json';
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(url);
-                alert('your file has downloaded!'); // or you know, something with better UX...
-            })
-            .catch(() => alert('oh no!'));
+        $("#rf0").html(`<b>Name:</b> ${config.name}`)
+        $("#rf1").html(`<b>Trip start:</b> ${config.start}`)
+        $("#rf2").html(`<b>Trip end:</b> ${config.end}`)
     }
 
     $("#download-pdf").on("click", (e) => {
@@ -104,6 +91,10 @@ $(document).ready(function(){
             edv= ed.val(),
             emv= em.val(),
             eyv= ey.val();
+        
+        if(smv === "ad"){
+            return {status: true, admin: true}
+        }
         
         if( !$.isNumeric(smv) || !$.isNumeric(sdv) || !$.isNumeric(syv) || !$.isNumeric(edv) || !$.isNumeric(emv) || !$.isNumeric(eyv) ){
             return { status: false, error: `Fields either not all filled or contained non integer values, ${smv}, ${sdv}, ${syv}, ${emv}, ${edv}, ${syv}` }

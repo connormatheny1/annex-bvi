@@ -30,7 +30,7 @@ a{
 }
 
 
-nav ul{
+nav ul.desktop-nav{
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -653,10 +653,9 @@ footer .main-footer{
     justify-content: space-between;
     padding: 30px 0;
     align-items: center;
-    width: 75%;
+    width: 80%;
     height: 100%;
     display: none;
-    text-align: center;
 }
 
 .forms-field{
@@ -664,6 +663,10 @@ footer .main-footer{
     border: 1px solid #002469;
     border-radius: 8px;
     -webkit-appearance: none;
+}
+
+.forms-row{
+    
 }
 
 
@@ -716,24 +719,40 @@ footer .main-footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
+    min-height: 700px;
+    box-sizing: border-box;
+    padding: 40px 0;
 }
 
 #forms-info{
-    width: 25%;
+    width: 15%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-#rooms-preview{
-    width: 70%;
+#forms-preview{
+    width: 82%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.files-nav{
+    padding: 10px 15px 0;
+}
+
+.files-main{
+    padding-top: 0;
+}
+
+iframe{
+    min-height: 500px;
 }
 
 
@@ -820,6 +839,11 @@ footer .main-footer{
 .hide{
     display: none;
     transition: .2s ease-in-out;
+}
+
+.sidebar .nav-link{
+    display: inline;
+    padding: 0;
 }
 
 
@@ -1004,3 +1028,5 @@ footer .main-footer{
         display: none!important;
     }
 }
+
+
