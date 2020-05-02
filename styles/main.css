@@ -405,40 +405,107 @@ footer .main-footer{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
+    min-height: 1200px;
 }
 
 .crew-bio{
     width: 100%;
-    height: 250px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
     padding: 20px;
+    height: 500px;
+    min-height: 300px;
+    box-sizing: border-box;
 }
 
 .bio-header{
     width: 20%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.first{
+    margin-top: 0!important;
+}
+
+.hh *{
+    margin: 0;
+}
+
+.hh{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.hhd{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.bio-header img{
-    border-radius: 50%;
+.hh h2{
+    margin-right: 4px;
 }
 
-.bio-image{
-    width: 187.5px;
-    height: 187.5px;
-    background-image: url('../images/sander-lenaerts-gmmDMhvgHi8-unsplash.jpg');
+.bio-header img{
+    
+}
+
+.half{
+    max-width: 60%;
+    margin: 0;
+    line-height: 22px;
+}
+
+.bio-info p{
+}
+
+.bio-image-steve{
+    width: 15%;
+    height: 95%;
+    background-image: url('../images/captain-steve.jpg');
     background-position: center;
     background-size: cover;
-    border-radius: 50%;
     background-repeat: no-repeat;
+}
+
+.bio-image-roma{
+    width: 225px;
+    height: 225px;
+    background-image: url('../images/roma.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.bio-image-gema{
+    width: 225px;
+    height: 225px;
+    background-image: url('../images/gema.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
+.bio-image-olivier{
+    width: 225px;
+    height: 225px;
+    background-image: url('../images/olivier.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
 }
 
 .bio-info{
@@ -446,8 +513,29 @@ footer .main-footer{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 70%;
+    width: 83%;
+}
+
+.crew-bio-double{
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+.double{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
     height: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 #thanks h1{
@@ -846,6 +934,16 @@ iframe{
     padding: 0;
 }
 
+.f-fs-fs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    /* flex-wrap: wrap; */
+    margin-bottom: 20px;
+}
 
 
 
